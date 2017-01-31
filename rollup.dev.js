@@ -20,7 +20,7 @@ export default {
      * React like the DOM is a tree so all
      * we need to do is pull in the root.
      */
-    entry: 'src/Entrypoint.js',
+    entry: 'src/Entrypoint.jsx',
     /**
      * Where to dump the JavaScript blob
      */
