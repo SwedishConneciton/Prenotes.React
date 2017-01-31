@@ -4,6 +4,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import makeDerivable from './Derivable.jsx';
 import Somebody from './Somebody/Main.jsx';
 import Anybody from './Anybody/Main.jsx';
+import Wipeout from './Wipeout.jsx';
 import {Routing as RoutingStore, Somebody as SomebodyStore} from './store';
 import page from 'page';
 import is from 'is_js';
@@ -45,7 +46,13 @@ class Routing extends React.Component {
     componentDidMount() {
         let self = this;
 
-        let hasSignedIn = (ctx, next) => self.props.signedIn;
+        let hasSignedIn = (ctx, next) => {
+            if (self.props.signedIn) {
+                next();
+            } else {
+                page('/Wipeout');
+            }
+        }
 
         page(
             '/',
@@ -56,15 +63,20 @@ class Routing extends React.Component {
 
         page(
             '/Anybody',
-            (ctx) => self.state.component = <Anybody />
+            (ctx) => self.setState({component: <Anybody />})
         );
 
         page(
             '/Somebody',
             hasToken,
-            isSignedIn,
-            (ctx) => self.state.component = <SomebodyDerivable />
+            hasSignedIn,
+            (ctx) => self.setState({component: <SomebodyDerivable />})
         );
+
+        page(
+            '/Wipeout',
+            (ctx) => self.setState({component: <Wipeout />})
+        )
 
         page.start();
         page('/');

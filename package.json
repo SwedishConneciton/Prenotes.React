@@ -33,6 +33,13 @@
         "babel-preset-stage-0": "6.16.0",
         "babel-plugin-external-helpers": "6.18.0",
         "enzyme": "2.7.0",
-        "react-addons-test-utils": "15.4.1"
+        "react-addons-test-utils": "15.4.1",
+        "http-server": "0.9.0"
+    },
+
+    "scripts": {
+        "dev": "./node_modules/.bin/rollup -c ./rollup.dev.js",
+        "serve": "./node_modules/.bin/http-server ./dist",
+        "local": "npm run dev && npm run serve"
     }
 }
