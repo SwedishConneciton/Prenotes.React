@@ -5,48 +5,55 @@
     "license": "MIT",
     
     "dependencies": {
-        "react": "15.4.1",
-        "react-dom": "15.4.1",
-        "material-ui": "0.16.6",
+        "react": "15.5.4",
+        "react-dom": "15.5.4",
+        "prop-types": "15.5.9",
+        "material-ui": "0.15.4",
         "react-tap-event-plugin": "2.0.1",
+        
         "derivable": "0.12.1",
         "immutable": "3.8.1",
+        
         "page": "1.7.1",
         "is_js": "0.9.0",
-        "react-flexbox-grid": "0.10.2",
+        
+        "react-flexbox-grid":"1.1.2",
         "classnames": "2.2.5",
         "flexboxgrid": "6.3.1"
     },
 
     "devDependencies": {
-        "rollup": "0.39.0",
+        "rollup": "0.41.6",
         "rollup-plugin-babel": "2.7.1",
-        "rollup-plugin-commonjs": "7.0.0",
-        "rollup-plugin-node-resolve": "2.0.0",
+        "rollup-plugin-commonjs": "8.0.2",
+        "rollup-plugin-node-resolve": "3.0.0",
         "rollup-plugin-node-globals": "1.1.0",
         "rollup-plugin-replace": "1.1.1",
-        "rollup-plugin-uglify": "1.0.1",
-        "rollup-plugin-postcss": "0.2.0",
-        "postcss-modules": "0.5.2",
-        "babel-preset-react": "6.16.0",
-        "babel-preset-es2015": "6.18.0",
-        "babel-preset-stage-0": "6.16.0",
-        "babel-plugin-external-helpers": "6.18.0",
-        "babel-register": "6.18.0",
-        "enzyme": "2.7.0",
+        "rollup-plugin-uglify": "1.0.2",
+        "rollup-plugin-postcss": "0.4.1",
+        "postcss-modules": "0.7.0",
+
+        "babel-preset-react": "6.24.1",
+        "babel-preset-es2015": "6.24.1",
+        "babel-preset-stage-0": "6.24.1",
+        "babel-plugin-external-helpers": "6.22.0",
+        "babel-register": "6.24.1",
+
+        "enzyme": "2.8.2",
         "chai": "3.5.0",
-        "mocha": "3.2.0",
+        "mocha": "3.3.0",
         "ignore-styles": "5.0.1",
-        "react-addons-test-utils": "15.4.1",
-        "http-server": "0.9.0",
-        "jsdom": "9.9.1",
-        "jsdom-global": "2.1.1"
+        "react-addons-test-utils": "15.5.1",
+        "http-server": "0.10.0",
+        "jsdom": "9.12.0",
+        "jsdom-global": "2.1.1",
+        "html5-history-api": "4.2.8"
     },
 
     "scripts": {
         "dev": "./node_modules/.bin/rollup -c ./rollup.dev.js",
         "serve": "./node_modules/.bin/http-server ./dist",
         "local": "npm run dev && npm run serve",
-        "test": "node ./node_modules/mocha/bin/mocha --require ignore-styles --compilers js:test/compiler.js test"
+        "test": "node ./node_modules/mocha/bin/mocha --require ignore-styles --compilers js:test/compiler.js test/Somebody"
     }
 }

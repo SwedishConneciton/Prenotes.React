@@ -101,19 +101,6 @@ export default {
          * for using third party modules in node_modules
          */
         resolve({
-            /**
-             * Use "main" field or index.js, even if it's not an ES6 module
-             * (needs to be converted from CommonJS to ES6 
-             * – see https://github.com/rollup/rollup-plugin-commonjs
-             */
-            main: true,
-
-            /**
-             * Some package.json files have a `browser` field which 
-             * specifies alternative files to load for people bundling 
-             * for the browser (which is us).
-             */
-            browser: true,
         })
     ]
 };
