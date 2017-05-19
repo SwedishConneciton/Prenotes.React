@@ -57,7 +57,7 @@ class Routing extends React.Component {
 
         page(
             '/Anybody',
-            (ctx) => self.setState({component: <Anybody />})
+            (ctx) => self.setState({component: <SomebodyDerivable />})
         );
 
         page(
